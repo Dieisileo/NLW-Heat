@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Dieisileo - DoWhile 2021</title>
+    <title>Dieisileo Reis - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -20,59 +20,60 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img
-            src="https://lorempixel.com/185/185/people/"
-            alt="Foto pessoal"
-          />
+          <img src="https://github.com/dieisileo.png" alt="Foto pessoal" />
         </div>
 
-        <h1>Dieisileo</h1>
-        <a href="https://instagram.com/leo_souza33">
+        <h1 id="userName">Dieisileo Reis</h1>
+        <a href="https://github.com/dieisileo" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
-          leo_souza33</a
+          dieisileo</a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p>Developer Student</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com/dieisileo">
-              <img
-                src="images/youtube.svg"
-                alt="ícone youtube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/dieisileo" target="_blank">
+              <img src="images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/dieisileo">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a href="https://facebook.com/dieisileo" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://facebook.com/dieisileo">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a href="https://instagram.com/dieisileo" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/dieisileo">
-              <img
-                src="images/twitter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a href="https://twitter.com/dieisileo" target="_blank">
+              <img src="images/twitter.svg" alt="ícone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksSocialMedia = {
+        github: 'dieisileo',
+        youtube: 'rocketseat',
+        facebook: 'dieisileo',
+        instagram: 'leo_souza33',
+        twitter: 'dieisileo'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
